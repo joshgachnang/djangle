@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from django.views.generic import TemplateView
 from rest_framework.routers import DefaultRouter
 
 from todo import models
@@ -19,6 +20,7 @@ urlpatterns = patterns('',
                                namespace='rest_framework')),
 
     url(r'^api/', include(router.urls)),
-    url(r'^_forms/', views.render_serializers)
+    url(r'^_forms', views.render_serializers),
 
+    url(r'^$', TemplateView.as_view(template_name="index.html"))
 )

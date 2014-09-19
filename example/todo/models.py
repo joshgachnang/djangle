@@ -8,8 +8,9 @@ from django_angular_forms import form_api
 class Todo(models.Model):
     title = models.CharField(max_length=255,
                              help_text='What do you need to do?')
-    description = models.TextField(help_text='How are you going to do it?')
-    due_date = models.DateTimeField()
+    description = models.TextField(help_text='How are you going to do it?',
+                                   )
+    due_date = models.DateField(blank=True, null=True, default=None)
 
 
 class TodoSerializer(serializers.ModelSerializer):

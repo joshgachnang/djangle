@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet"
+          href="{% static 'bower_components/foundation/css/foundation.css' %}"/>
+    <link rel="stylesheet"
+          href="{% static 'bower_components/foundation-datepicker/stylesheets/foundation-datepicker.css' %}"/>
+    <script src="{% static 'bower_components/modernizr/modernizr.js' %}"></script>
+    <script src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'bower_components/foundation/js/foundation.js' %}"></script>
+    <script src="{% static 'bower_components/angularjs/angular.js' %}"></script>
+    <script src="{% static 'bower_components/angular-resource/angular-resource.js' %}"></script>
+
+    <script src="{% static 'bower_components/foundation-datepicker/js/foundation-datepicker.js' %}"></script>
+    <script src="{% static 'django_forms.js' %}"></script>
+    <script src="{% static 'app.js' %}"></script>
+
+    <script>
+        $(document).foundation();
+    </script>
+</head>
+<body ng-app="example">
+<div class="row large-6">
+    <form ng-submit="submit()" ng-controller="ExampleCtrl">
+        <djangoform form="todo"></djangoform>
+    </form>
+</div>
+
+</body>
+</html>
