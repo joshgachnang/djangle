@@ -1,4 +1,4 @@
-django-angular-forms
+Djangle
 ====================
 
 Django automagic forms using Angular and Django REST Framework.
