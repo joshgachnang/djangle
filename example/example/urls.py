@@ -1,7 +1,9 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from todo import models
 from rest_framework.routers import DefaultRouter
+
+from todo import models
+from django_angular_forms import views
 
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
@@ -16,5 +18,7 @@ urlpatterns = patterns('',
     url(r'^api-auth/', include('rest_framework.urls',
                                namespace='rest_framework')),
 
-    url(r'^', include(router.urls)),
+    url(r'^api/', include(router.urls)),
+    url(r'^_forms/', views.render_serializers)
+
 )
