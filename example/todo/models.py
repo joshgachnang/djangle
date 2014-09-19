@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 from rest_framework import serializers
 from rest_framework import viewsets
 
@@ -24,4 +25,5 @@ class TodoViewSet(viewsets.ModelViewSet):
     serializer_class = TodoSerializer
 
 
+admin.site.register(Todo)
 form_api.api.register('todo', TodoSerializer)

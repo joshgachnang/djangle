@@ -21,9 +21,9 @@
         $(document).foundation();
     </script>
 </head>
-<body ng-app="example">
+<body ng-app="example" ng-controller="ExampleCtrl">
 <div class="row large-6">
-    <form ng-submit="submit()" ng-controller="ExampleCtrl">
+    <form ng-submit="submit()">
         <djangoform form="todo"></djangoform>
     </form>
 </div>
