@@ -39,6 +39,18 @@ angular.module('djangle', [])
     }
   })
 
+  .directive('urlfield', function () {
+    // TODO(pcsforeducation) refactor into charfield
+    return {
+      restrict: 'E',
+      // declare the directive scope as private
+      scope: {
+        form: '='
+      },
+      templateUrl: 'static/partials/url_field.html'
+    }
+  })
+
   .directive('djangoform', function () {
     return {
       restrict: 'E',

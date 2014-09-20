@@ -3,9 +3,11 @@
 
   <div class="django_form_field" ng-repeat="field in form.fields"
        ng-switch="field.type_name">
-    {{field.type_name}}
     <div ng-switch-when="CharField">
       <charfield form="field"></charfield>
+    </div>
+    <div ng-switch-when="URLField">
+      <urlfield form="field"></urlfield>
     </div>
     <div ng-switch-when="DateField">
       <datefield form="field"></datefield>

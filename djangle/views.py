@@ -35,7 +35,6 @@ def _get_fields(instance):
         # Add field specific additional fields
         for attr in additional_field_attrs.get(field.type_label, []):
             f[attr] = getattr(field, attr)
-            if attr == 'choices':
-                print 'choices', getattr(field, attr)
+        print field_name, dir(field)
         fields.append(f)
     return fields
