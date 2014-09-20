@@ -28,6 +28,17 @@ angular.module('djangle', [])
     }
   })
 
+  .directive('choicefield', function () {
+    return {
+      restrict: 'E',
+      // declare the directive scope as private
+      scope: {
+        form: '='
+      },
+      templateUrl: 'static/partials/choice_field.html'
+    }
+  })
+
   .directive('djangoform', function () {
     return {
       restrict: 'E',

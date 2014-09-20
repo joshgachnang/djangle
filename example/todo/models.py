@@ -11,12 +11,11 @@ CATEGORIES = (('Do Now', 'Do Now'), ('Later', 'later'))
 class Todo(models.Model):
     title = models.CharField(max_length=255,
                              help_text='What do you need to do?')
-    description = models.TextField(help_text='How are you going to do it?',
-    )
+    description = models.TextField(help_text='How are you going to do it?')
     due_date = models.DateField(blank=True, null=True, default=None)
     link = models.URLField(blank=True, null=True, default=None)
     category = models.CharField(choices=CATEGORIES, max_length=32,
-                                default='Do Now')
+                                default='Later')
 
 
 class TodoSerializer(serializers.ModelSerializer):

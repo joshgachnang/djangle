@@ -33,8 +33,9 @@ def _get_fields(instance):
                      'read_only', 'default', 'type_name']:
             f[attr] = getattr(field, attr)
         # Add field specific additional fields
-        for attr in additional_field_attrs[field.type_label]:
+        for attr in additional_field_attrs.get(field.type_label, []):
             f[attr] = getattr(field, attr)
-
+            if attr == 'choices':
+                print 'choices', getattr(field, attr)
         fields.append(f)
     return fields
