@@ -3,7 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('example', [
   'ngResource',
-  'django_forms',
+  'djangle',
 ])
   .controller('ExampleCtrl', ['$scope', '$http', 'Form', function ($scope, $http, Form) {
     $scope.submit = function() {

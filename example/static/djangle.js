@@ -1,4 +1,4 @@
-angular.module('django_forms', [])
+angular.module('djangle', [])
   .factory('Form', ['$resource', function ($resource) {
     return $resource('/_forms/', null,
       {

@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 from rest_framework.routers import DefaultRouter
 
 from todo import models
-from django_angular_forms import views
+from djangle import views
 
 # Create a router and register our viewsets with it.
 router = DefaultRouter()

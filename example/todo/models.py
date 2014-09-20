@@ -3,7 +3,7 @@ from django.contrib import admin
 from rest_framework import serializers
 from rest_framework import viewsets
 
-from django_angular_forms import form_api
+from djangle import form_api
 
 
 class Todo(models.Model):

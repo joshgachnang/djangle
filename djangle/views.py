@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 
-from django_angular_forms import form_api
+from djangle import form_api
 
 
 additional_field_attrs = {
