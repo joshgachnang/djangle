@@ -1,7 +1,9 @@
 <fieldset>
     <legend>{{ form.title }}</legend>
+
     <div class="django_form_field" ng-repeat="field in form.fields"
          ng-switch="field.type_name">
+        {{field.type_name}}
         <div ng-switch-when="CharField">
             <charfield form="field"></charfield>
         </div>

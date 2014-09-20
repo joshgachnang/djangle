@@ -6,7 +6,9 @@ from djangle import form_api
 additional_field_attrs = {
     'string': ['max_length', 'min_length'],
     'datetime': [],
-    'date': []
+    'date': [],
+    'url': [],
+    'choice': ['choices']
 }
 
 
@@ -33,6 +35,6 @@ def _get_fields(instance):
         # Add field specific additional fields
         for attr in additional_field_attrs[field.type_label]:
             f[attr] = getattr(field, attr)
-        print f
+
         fields.append(f)
     return fields
